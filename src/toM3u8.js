@@ -43,7 +43,9 @@ const mergeDiscontiguousPlaylists = playlists => {
       // Although they represent the same number, it's important to have both to make it
       // compatible with HLS potentially having a similar attribute.
       start: playlist.attributes.periodStart,
-      timeline: playlist.attributes.periodStart
+      timeline: playlist.attributes.periodStart,
+      id: playlist.attributes.periodId,
+      duration: playlist.attributes.periodDuration
     });
 
     return acc;

@@ -429,6 +429,7 @@ export const toRepresentations =
 export const toAdaptationSets = (mpdAttributes, mpdBaseUrls) => (period, index) => {
   const periodBaseUrls = buildBaseUrls(mpdBaseUrls, findChildren(period.node, 'BaseURL'));
   const periodAttributes = merge(mpdAttributes, {
+    periodId: period.attributes.id,
     periodStart: period.attributes.start
   });
 
