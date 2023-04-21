@@ -12,6 +12,7 @@
     "mpd-to-m3u8-json": "bin/parse.js"
   },
   "scripts": {
+    "prepare": "npm run build",
     "prenetlify": "npm run build",
     "netlify": "node scripts/netlify.js",
     "build-test": "cross-env-shell TEST_BUNDLE_ONLY=1 'npm run build'",
