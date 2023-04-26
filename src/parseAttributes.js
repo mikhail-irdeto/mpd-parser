@@ -71,6 +71,19 @@ export const parsers = {
   },
 
   /**
+   * specifices the publish time of mpd. Format is a date time string as specified in ISO 8601
+   *
+   * @param {string} value
+   *        value of attribute as a string
+   *
+   * @return {Date}
+   *         The publish time as a Date object
+   */
+  publishTime(value) {
+    return parseDate(value);
+  },
+
+  /**
    * Specifies the duration of the smallest time shifting buffer for any Representation
    * in the MPD. Format is a duration string as specified in ISO 8601
    *
